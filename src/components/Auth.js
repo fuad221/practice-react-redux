@@ -1,11 +1,8 @@
 
 
-  const dispatch = useDispatch();
+const Auth = () => {
 
-
-
-  };
-
+  
   return (
     <main className={classes.auth}>
       <section>
