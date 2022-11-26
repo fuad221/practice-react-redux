@@ -1,8 +1,11 @@
-import { useDispatch } from 'react-redux'
-import {createStore} from 'redux'
+import { configureStore } from '@reduxjs/toolkit';
 
-const dispatch = useDispatch()
+import counterReducer from './counter';
+import authReducer from './auth';
 
-const decrementHandler = ()=> {
-    dispatch{type: 'decrement'}
-}
+
+const store = configureStore({
+  reducer: { counter: counterReducer, auth: authReducer },
+});
+
+export default store;
